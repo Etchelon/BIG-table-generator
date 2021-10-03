@@ -7,53 +7,6 @@ import {
 } from "./helpers";
 
 describe("N Teams ranked in order", () => {
-	// const N_TEAMS = 6;
-	// const TEAM_SIZE = 4;
-	// const TABLE_SIZE = 4;
-	// let teams: string[] = [];
-	// let players: Player[] = [];
-	// let tables: Table[] = [];
-
-	// beforeAll(() => {
-	// 	teams = generateTeams(N_TEAMS);
-	// });
-
-	// beforeEach(() => {
-	// 	const allPlayers = generatePlayers(teams);
-	// 	players = flatMap(teams, (team, teamNumber) => {
-	// 		const teamPlayers = chain(allPlayers)
-	// 			.filter(p => p.team === team)
-	// 			.each((p, n) => (p.ranking = teamNumber * TEAM_SIZE + (n + 1)))
-	// 			.value();
-	// 		return teamPlayers;
-	// 	});
-	// 	tables = makeTables(players, TABLE_SIZE);
-	// 	each(tables, t => {
-	// 		let log = `\n${t.id}`;
-	// 		each(
-	// 			t.players,
-	// 			p => (log += `\n\t${p.id} (${p.team}) - ranking: ${p.ranking}`)
-	// 		);
-	// 		console.log(log);
-	// 	});
-	// });
-
-	// test("Verify common cases", () => {
-	// 	console.log("Each table has only 1 player per team");
-	// 	expect(noTablesWithMoreThan1PlayerPerTeam(tables)).toBe(true);
-
-	// 	console.log(
-	// 		"Players of each team are placed in tables in order according to their rankings"
-	// 	);
-	// 	expect(allPlayersAreSorted(tables)).toBe(true);
-
-	// 	const tablesWithNotExactly4Players = filter(
-	// 		tables,
-	// 		t => t.players.length !== 4
-	// 	);
-	// 	expect(tablesWithNotExactly4Players).toHaveLength(0);
-	// });
-
 	each([4, 5, 6, 7, 8], nTeams => {
 		const TEAM_SIZE = 4;
 		const TABLE_SIZE = 4;
